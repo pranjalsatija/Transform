@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5C87B81F478E1300913DD8 /* Tagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C87B71F478E1300913DD8 /* Tagger.swift */; };
+		AF5C87BA1F47901E00913DD8 /* Remover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C87B91F47901E00913DD8 /* Remover.swift */; };
+		AF5C87BC1F4797DB00913DD8 /* Extractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C87BB1F4797DB00913DD8 /* Extractor.swift */; };
+		AF64147F1F47877900196669 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA1CB61F47836800212EFF /* Utilities.swift */; };
 		AFC142951F4781E200515A8C /* Transform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC1428B1F4781E200515A8C /* Transform.framework */; };
-		AFC1429A1F4781E200515A8C /* TransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC142991F4781E200515A8C /* TransformTests.swift */; };
+		AFC1429A1F4781E200515A8C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC142991F4781E200515A8C /* Tests.swift */; };
 		AFC1429C1F4781E200515A8C /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC1428E1F4781E200515A8C /* Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFCA1CB31F47829300212EFF /* Lemmatizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA1CB21F47829300212EFF /* Lemmatizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +28,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF5C87B71F478E1300913DD8 /* Tagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagger.swift; sourceTree = "<group>"; };
+		AF5C87B91F47901E00913DD8 /* Remover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remover.swift; sourceTree = "<group>"; };
+		AF5C87BB1F4797DB00913DD8 /* Extractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
 		AFC1428B1F4781E200515A8C /* Transform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1428E1F4781E200515A8C /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
 		AFC1428F1F4781E200515A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC142941F4781E200515A8C /* TransformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFC142991F4781E200515A8C /* TransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformTests.swift; sourceTree = "<group>"; };
+		AFC142991F4781E200515A8C /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		AFC1429B1F4781E200515A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFCA1CB21F47829300212EFF /* Lemmatizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lemmatizer.swift; sourceTree = "<group>"; };
+		AFCA1CB61F47836800212EFF /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 		AFC142811F4781E200515A8C = {
 			isa = PBXGroup;
 			children = (
+				AFCA1CB11F47827800212EFF /* Sources */,
 				AFC1428D1F4781E200515A8C /* Transform */,
 				AFC142981F4781E200515A8C /* TransformTests */,
 				AFC1428C1F4781E200515A8C /* Products */,
@@ -80,10 +91,23 @@
 		AFC142981F4781E200515A8C /* TransformTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFC142991F4781E200515A8C /* TransformTests.swift */,
+				AFC142991F4781E200515A8C /* Tests.swift */,
 				AFC1429B1F4781E200515A8C /* Info.plist */,
 			);
 			path = TransformTests;
+			sourceTree = "<group>";
+		};
+		AFCA1CB11F47827800212EFF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AF5C87BB1F4797DB00913DD8 /* Extractor.swift */,
+				AFCA1CB21F47829300212EFF /* Lemmatizer.swift */,
+				AF5C87B91F47901E00913DD8 /* Remover.swift */,
+				AF5C87B71F478E1300913DD8 /* Tagger.swift */,
+				AFCA1CB61F47836800212EFF /* Utilities.swift */,
+			);
+			name = Sources;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +172,7 @@
 				TargetAttributes = {
 					AFC1428A1F4781E200515A8C = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					AFC142931F4781E200515A8C = {
 						CreatedOnToolsVersion = 9.0;
@@ -194,6 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5C87BA1F47901E00913DD8 /* Remover.swift in Sources */,
+				AF5C87B81F478E1300913DD8 /* Tagger.swift in Sources */,
+				AF5C87BC1F4797DB00913DD8 /* Extractor.swift in Sources */,
+				AF64147F1F47877900196669 /* Utilities.swift in Sources */,
+				AFCA1CB31F47829300212EFF /* Lemmatizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFC1429A1F4781E200515A8C /* TransformTests.swift in Sources */,
+				AFC1429A1F4781E200515A8C /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +362,7 @@
 		AFC142A01F4781E200515A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MXGFXQ4GNJ;
@@ -344,6 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranjalsatija.Transform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,6 +384,7 @@
 		AFC142A11F4781E200515A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MXGFXQ4GNJ;
@@ -372,6 +405,7 @@
 		AFC142A31F4781E200515A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MXGFXQ4GNJ;
 				INFOPLIST_FILE = TransformTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -385,6 +419,7 @@
 		AFC142A41F4781E200515A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MXGFXQ4GNJ;
 				INFOPLIST_FILE = TransformTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -414,6 +449,7 @@
 				AFC142A11F4781E200515A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFC142A21F4781E200515A8C /* Build configuration list for PBXNativeTarget "TransformTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +458,7 @@
 				AFC142A41F4781E200515A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
