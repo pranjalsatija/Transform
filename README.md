@@ -8,7 +8,7 @@ Put simply, Transform can help you analyze a piece of text, but it can not use t
 
 Transform offers 4 operations: extraction, lemmatization, filtering, and tagging. For those unfamiliar with linguistics / NLP, here's a brief explanation of each:
 * **Extraction**: Extraction takes a given input and extracts the selected tags, meaning it takes an input and preserves the words that correspond to the specified tags, while discarding everything else. Extraction is useful when you're looking to pull certain information out of text, such as the names of all the people mentioned in the text, or all the verbs present in the text.
-* **Lemmatization**: Lemmatization takes a given input and reduces each individual word down to its root. This means that words like "bought" become "buy" and words like "concerts" become "concert". Lemmatization is useful if you're implementing keyword-based search, as it allows searches to work even when the user searches for a different inflection of the specified word.
+* **Lemmatization**: Lemmatization takes a given input and reduces each individual word down to its root. This means that words like "bought" become "buy" and words like "concerts" become "concert". Lemmatization is useful if you're implementing keyword-based search, as it allows searches to work even when the user searches for a different inflection of the specified word. For example, search queries such as "boating" and "boats" can still resolve to the word "boat".
 * **Filtering**: Filtering is the opposite of extraction. Filtering processes a given input and removes the specified tags. Filtering is useful as a preprocessing mechanism when implementing keyword-based search, because it allows you to remove words that don't have much meaning, such as conjunctions.
 * **Tagging**: Tagging takes a given input and tags each individual word as its correct part of speech or name type. Most applications don't have an immediate use for tagging in and of itself, but tagging is necessary to process inputs for tasks such as extraction and filtering.
 
@@ -30,7 +30,7 @@ print(extracted.tagged()[.adjective]) //Optional(["quick", "lazy"])
 ```
 
 ### Lemmatization
-The lemmatization API, which is implemented as the method `lemmatized` on `String` and `[String]`, removes all of the names from the item it's operating on and then lemmatizes the rest of the words. It returns a string or an array of strings, depending on the initial object.
+The lemmatization API, which is implemented as the method `lemmatized` on `String` and `[String]`, lemmatizes the string or array it's operating on. It returns a string or an array of strings, depending on the initial object.
 
 ```swift
 let string = "The people went to grocery stores to buy gallons of milk."
