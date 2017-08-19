@@ -55,7 +55,7 @@ For example, you may want to first remove conjunctions from a string, and then l
 
 ```swift
 let string = "The quick brown fox jumped over the lazy dog."
-print(string.tagged()) //[__C.NSLinguisticTag(_rawValue: Pronoun): ["There"], __C.NSLinguisticTag(_rawValue: Preposition): ["of", "in", "of"], __C.NSLinguisticTag(_rawValue: Determiner): ["a", "the"], __C.NSLinguisticTag(_rawValue: Verb): ["\'s"], __C.NSLinguisticTag(_rawValue: Noun): ["lot", "traffic", "cities"], __C.NSLinguisticTag(_rawValue: PlaceName): ["Los Angeles", "New York"], __C.NSLinguisticTag(_rawValue: Conjunction): ["and"]]
+print(string.tagged()) //[__C.NSLinguisticTag(_rawValue: Adjective): ["quick", "brown", "lazy"], __C.NSLinguisticTag(_rawValue: Preposition): ["over"], __C.NSLinguisticTag(_rawValue: Determiner): ["The", "the"], __C.NSLinguisticTag(_rawValue: Verb): ["jumped"], __C.NSLinguisticTag(_rawValue: Noun): ["fox", "dog"]]
 ```
 
 
