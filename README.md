@@ -57,3 +57,14 @@ For example, you may want to first remove conjunctions from a string, and then l
 let string = "The quick brown fox jumped over the lazy dog."
 print(string.tagged()) //[__C.NSLinguisticTag(_rawValue: Pronoun): ["There"], __C.NSLinguisticTag(_rawValue: Preposition): ["of", "in", "of"], __C.NSLinguisticTag(_rawValue: Determiner): ["a", "the"], __C.NSLinguisticTag(_rawValue: Verb): ["\'s"], __C.NSLinguisticTag(_rawValue: Noun): ["lot", "traffic", "cities"], __C.NSLinguisticTag(_rawValue: PlaceName): ["Los Angeles", "New York"], __C.NSLinguisticTag(_rawValue: Conjunction): ["and"]]
 ```
+
+
+## Installation
+To install Transform, add it as a subproject to whatever it is you're working on and then link it as a framework via Xcode's build settings.
+
+## To Do
+- [ ] Create CocoaPod
+- [ ] Add binary versions of the framework under "Releases"
+- [ ] Use custom POS tagger with increased accuracy and speed
+- [ ] Improve performance
+- [ ] Add decision making tools (classifiers, decision trees, etc.)
