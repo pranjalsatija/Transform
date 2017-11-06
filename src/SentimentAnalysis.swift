@@ -15,9 +15,9 @@ public enum Sentiment: String {
 }
 
 public struct SentimentAnalysisResult {
-    let negative: Double
-    let positive: Double
-    let overall: Sentiment
+    let negativeProbability: Double
+    let positiveProbability: Double
+    let overallSentiment: Sentiment
 }
 
 private let sentimentPolarityModel = SentimentPolarity()
@@ -40,7 +40,11 @@ extension Array where Element: StringProtocol {
         let positiveProbability = prediction.classProbability[Sentiment.positive.rawValue] ?? 0
         let overallSentiment = Sentiment(rawValue: prediction.classLabel) ?? .neutral
 
-        return SentimentAnalysisResult(negative: negativeProbability, positive: positiveProbability, overall: overallSentiment)
+        return SentimentAnalysisResult(
+            negativeProbability: negativeProbability,
+            positiveProbability: positiveProbability,
+            overallSentiment: overallSentiment
+        )
     }
 }
 
