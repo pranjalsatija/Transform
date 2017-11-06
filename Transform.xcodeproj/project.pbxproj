@@ -11,6 +11,8 @@
 		AF5C87BA1F47901E00913DD8 /* Remover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C87B91F47901E00913DD8 /* Remover.swift */; };
 		AF5C87BC1F4797DB00913DD8 /* Extractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C87BB1F4797DB00913DD8 /* Extractor.swift */; };
 		AF64147F1F47877900196669 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA1CB61F47836800212EFF /* Utilities.swift */; };
+		AFB9EE8A1FB0CD5300AD9601 /* SentimentAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB9EE891FB0CD5300AD9601 /* SentimentAnalysis.swift */; };
+		AFB9EE8D1FB0CD7400AD9601 /* SentimentPolarity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AFB9EE8C1FB0CD7400AD9601 /* SentimentPolarity.mlmodel */; };
 		AFC142951F4781E200515A8C /* Transform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC1428B1F4781E200515A8C /* Transform.framework */; };
 		AFC1429A1F4781E200515A8C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC142991F4781E200515A8C /* Tests.swift */; };
 		AFC1429C1F4781E200515A8C /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC1428E1F4781E200515A8C /* Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +33,8 @@
 		AF5C87B71F478E1300913DD8 /* Tagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagger.swift; sourceTree = "<group>"; };
 		AF5C87B91F47901E00913DD8 /* Remover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remover.swift; sourceTree = "<group>"; };
 		AF5C87BB1F4797DB00913DD8 /* Extractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
+		AFB9EE891FB0CD5300AD9601 /* SentimentAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysis.swift; sourceTree = "<group>"; };
+		AFB9EE8C1FB0CD7400AD9601 /* SentimentPolarity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentPolarity.mlmodel; sourceTree = "<group>"; };
 		AFC1428B1F4781E200515A8C /* Transform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1428E1F4781E200515A8C /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
 		AFC1428F1F4781E200515A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,10 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFB9EE8B1FB0CD6500AD9601 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9EE8C1FB0CD7400AD9601 /* SentimentPolarity.mlmodel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AFC142811F4781E200515A8C = {
 			isa = PBXGroup;
 			children = (
 				AFCA1CB11F47827800212EFF /* Sources */,
+				AFB9EE8B1FB0CD6500AD9601 /* Resources */,
 				AFC1428D1F4781E200515A8C /* Transform */,
 				AFC142981F4781E200515A8C /* TransformTests */,
 				AFC1428C1F4781E200515A8C /* Products */,
@@ -103,6 +116,7 @@
 				AF5C87BB1F4797DB00913DD8 /* Extractor.swift */,
 				AFCA1CB21F47829300212EFF /* Lemmatizer.swift */,
 				AF5C87B91F47901E00913DD8 /* Remover.swift */,
+				AFB9EE891FB0CD5300AD9601 /* SentimentAnalysis.swift */,
 				AF5C87B71F478E1300913DD8 /* Tagger.swift */,
 				AFCA1CB61F47836800212EFF /* Utilities.swift */,
 			);
@@ -224,6 +238,8 @@
 				AF5C87BC1F4797DB00913DD8 /* Extractor.swift in Sources */,
 				AF64147F1F47877900196669 /* Utilities.swift in Sources */,
 				AFCA1CB31F47829300212EFF /* Lemmatizer.swift in Sources */,
+				AFB9EE8D1FB0CD7400AD9601 /* SentimentPolarity.mlmodel in Sources */,
+				AFB9EE8A1FB0CD5300AD9601 /* SentimentAnalysis.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

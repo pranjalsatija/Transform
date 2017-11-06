@@ -22,7 +22,6 @@ extension String {
     }
 
     func toArray() -> [String] {
-        let words = self.characters.split(separator: " ")
-        return words.map { String($0) }
+        return self.split(separator: " ").map { String($0) }
     }
 }
